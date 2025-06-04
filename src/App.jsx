@@ -1,9 +1,13 @@
-function App() {
+// Routes
+import { MainRouter } from "./routes/route";
+
+// Styled
+import "./styles/globals.css";
+
+export function App() {
   return (
     <>
-      <h1>Teste</h1>
+      <MainRouter />
     </>
   );
 }
-
-export default App;
