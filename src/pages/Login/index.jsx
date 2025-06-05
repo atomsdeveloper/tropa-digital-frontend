@@ -28,6 +28,7 @@ export const Login = () => {
     const res = login(form.email, form.password);
     if (!res.success) {
       setError(res.message);
+      console.log(error);
     } else {
       setError("");
     }
