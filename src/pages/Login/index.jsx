@@ -1,15 +1,31 @@
+// React
 import { useState } from "react";
+
+// Styled Components
+import {
+  Container,
+  BoxLogin,
+  BoxForm,
+  Form,
+  BoxImage,
+  BoxBgImage,
+  Title,
+  Text,
+  BoxInput,
+} from "./styled";
 
 // Hooks
 import { useUser } from "../../hooks/useUser";
 
 export const Login = () => {
+  // Context
   const { login, user, logout } = useUser();
-  const [form, setForm] = useState({ username: "", password: "" });
+
+  const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
   const handleLogin = () => {
-    const res = login(form.username, form.password);
+    const res = login(form.email, form.password);
     if (!res.success) {
       setError(res.message);
     } else {
@@ -27,19 +43,50 @@ export const Login = () => {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Usuário"
-        onChange={(e) => setForm({ ...form, username: e.target.value })}
-      />
-      <input
-        type="password"
-        placeholder="Senha"
-        onChange={(e) => setForm({ ...form, password: e.target.value })}
-      />
-      <button onClick={handleLogin}>Login</button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-    </div>
+    <Container>
+      <BoxLogin>
+        <BoxForm>
+          <img
+            src="login-logo.png"
+            alt="Imagem de logo da página."
+            width={161}
+            height={25}
+          />
+          <Title>Bem-Vindo de volta</Title>
+          <Text>Entre com sua conta para acessar o painel.</Text>
+          <Form>
+            <BoxInput>
+              <label htmlFor="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="E-mail"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+              />
+            </BoxInput>
+
+            <BoxInput>
+              <label htmlFor="password">Senha</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Senha"
+                value={form.password}
+                onChange={(e) => setForm({ ...form, password: e.target.value })}
+              />
+              {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+            </BoxInput>
+            <button onClick={handleLogin}>Entrar</button>
+          </Form>
+        </BoxForm>
+
+        <BoxImage>
+          <BoxBgImage>
+            <img src="login-image.png" alt="" />
+          </BoxBgImage>
+        </BoxImage>
+      </BoxLogin>
+    </Container>
   );
 };
