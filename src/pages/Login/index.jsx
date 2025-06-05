@@ -1,13 +1,45 @@
+import { useState } from "react";
+
+// Hooks
+import { useUser } from "../../hooks/useUser";
+
 export const Login = () => {
+  const { login, user, logout } = useUser();
+  const [form, setForm] = useState({ username: "", password: "" });
+  const [error, setError] = useState("");
+
+  const handleLogin = () => {
+    const res = login(form.username, form.password);
+    if (!res.success) {
+      setError(res.message);
+    } else {
+      setError("");
+    }
+  };
+
+  if (user) {
+    return (
+      <div>
+        <p>Bem-vindo, {user.name}!</p>
+        <button onClick={logout}>Sair</button>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-6xl font-bold text-blue-600">Login</h1>
-      <p className="mt-4 text-xl text-gray-700">
-        Por favor, faça login para continuar
-      </p>
-      <a href="/dashboard" className="mt-6 text-blue-500 hover:underline">
-        Ir para o Dashboard
-      </a>
+    <div>
+      <input
+        type="text"
+        placeholder="Usuário"
+        onChange={(e) => setForm({ ...form, username: e.target.value })}
+      />
+      <input
+        type="password"
+        placeholder="Senha"
+        onChange={(e) => setForm({ ...form, password: e.target.value })}
+      />
+      <button onClick={handleLogin}>Login</button>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };
