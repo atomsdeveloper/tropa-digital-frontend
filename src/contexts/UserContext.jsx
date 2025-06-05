@@ -1,10 +1,11 @@
 // React
-import { useEffect, useState, createContext } from "react";
+import { useEffect, useState } from "react";
 
 // Datas
 import users from "../data/users.json";
 
-export const UserContext = createContext();
+// Context
+import UserContext from "./CreateContext";
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -16,13 +17,13 @@ export const UserProvider = ({ children }) => {
     }
   }, []);
 
-  const login = (username, password) => {
+  const login = (email, password) => {
     const found = users.find(
-      (user) => user.username === username && user.password === password
+      (user) => user.email === email && user.password === password
     );
 
     if (found) {
-      const userData = { username: found.username, name: found.name };
+      const userData = { email: found.email, name: found.name };
       setUser(userData);
       localStorage.setItem("auth_user", JSON.stringify(userData));
       return { success: true };
