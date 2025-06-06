@@ -12,6 +12,10 @@ import {
   Title,
   Text,
   BoxInput,
+  InputLabel,
+  Input,
+  Button,
+  BoxFormContent,
 } from "./styled";
 
 // Hooks
@@ -47,39 +51,46 @@ export const Login = () => {
     <Container>
       <BoxLogin>
         <BoxForm>
-          <img
-            src="login-logo.png"
-            alt="Imagem de logo da página."
-            width={161}
-            height={25}
-          />
-          <Title>Bem-Vindo de volta</Title>
-          <Text>Entre com sua conta para acessar o painel.</Text>
-          <Form>
-            <BoxInput>
-              <label htmlFor="email">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="E-mail"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-              />
-            </BoxInput>
+          <BoxFormContent>
+            <img
+              src="login-logo.png"
+              alt="Imagem de logo da página."
+              width={161}
+              height={25}
+            />
+            <Title>
+              Bem-Vindo de volta{" "}
+              <span>Entre com sua conta para acessar o painel</span>
+            </Title>
+            <Form>
+              <BoxInput>
+                <InputLabel htmlFor="email">E-mail</InputLabel>
+                <Input
+                  type="email"
+                  id="email"
+                  placeholder="seunome@seuservidor.com"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+              </BoxInput>
 
-            <BoxInput>
-              <label htmlFor="password">Senha</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Senha"
-                value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
-              />
-              {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-            </BoxInput>
-            <button onClick={handleLogin}>Entrar</button>
-          </Form>
+              <BoxInput>
+                <InputLabel htmlFor="password">Senha</InputLabel>
+                <Input
+                  type="password"
+                  id="password"
+                  placeholder="Senha"
+                  value={form.password}
+                  onChange={(e) =>
+                    setForm({ ...form, password: e.target.value })
+                  }
+                />
+                <img src="eye-pass.png" alt="" width={26} height={26} />
+                {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+              </BoxInput>
+              <Button onClick={handleLogin}>Entrar</Button>
+            </Form>
+          </BoxFormContent>
         </BoxForm>
 
         <BoxImage>
