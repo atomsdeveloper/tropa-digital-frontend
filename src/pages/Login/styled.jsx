@@ -72,92 +72,6 @@ export const Text = styled.p`
   color: #a7a7a7;
 `;
 
-export const Form = styled.form`
-  width: 299px;
-  height: 200px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  gap: 35px;
-`;
-
-export const BoxInput = styled.div`
-  width: 100%;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  img {
-    position: relative;
-    top: -3.5rem;
-    left: 25rem;
-  }
-`;
-
-export const InputLabel = styled.label`
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 15px;
-
-  color: #cc6237;
-`;
-
-export const Input = styled.input`
-  width: 100%;
-  height: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  border-radius: 100px;
-
-  font-size: 13px;
-  line-height: 15px;
-
-  background-color: #f6f6f6;
-
-  color: #657593;
-
-  &:focus {
-    outline: none;
-    border-color: #cc6237;
-  }
-`;
-
-export const Button = styled.button`
-  width: 299px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #fff;
-  background-color: #cc6237;
-
-  border: none;
-  border-radius: 100px;
-
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 15px;
-
-  cursor: pointer;
-
-  transition: background-color 300ms ease-out, box-shadow 300ms ease-out,
-    opacity 300ms ease-out;
-
-  &:hover {
-    background-color: #b0552f;
-    opacity: 0.95;
-    box-shadow: 0 4px 16px rgba(204, 98, 55, 0.15);
-  }
-`;
-
 export const BoxImage = styled.div`
   width: 397.5px;
   height: 478px;
@@ -175,12 +89,12 @@ export const BoxBgImage = styled.div`
 
   position: absolute;
 
-  img {
+  svg {
     width: 357px;
     height: 316px;
 
-    top: 178.5px;
+    top: 163px;
     position: relative;
-    right: 38px;
+    right: 35px;
   }
 `;
