@@ -7,6 +7,8 @@ import PropTypes from "prop-types";
 export const Button = ({
   width,
   height,
+  bg,
+  colorText,
   children,
   type = "button",
   onClick,
@@ -20,6 +22,8 @@ export const Button = ({
     style={{
       width: width,
       height: height,
+      backgroundColor: bg,
+      color: colorText,
     }}
     className={className}
     disabled={disabled}

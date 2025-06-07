@@ -72,7 +72,12 @@ export const FormComponent = () => {
         <SvgImageComponents svg={Eye} width={25} />
       </Container>
 
-      <Button onClick={handleLogin} width={"100%"} height={"40px"}>
+      <Button
+        onClick={handleLogin}
+        width={"100%"}
+        height={"40px"}
+        bg={"#cc6237"}
+      >
         Entrar
       </Button>
     </Form>

@@ -6,7 +6,6 @@ import {
   Header,
   HeaderContent,
   BoxInput,
-  BoxButton,
 } from "./styled";
 
 // Component
@@ -38,12 +37,21 @@ export const EventsComponent = () => {
                 />
               </BoxInput>
 
-              <BoxButton>
-                <SvgImageComponents svg={More} width={16} height={16} />
-                <Button width={"124px"} height={"34px"}>
-                  Inserir novo
-                </Button>
-              </BoxButton>
+              <Button
+                width={"130px"}
+                height={"34px"}
+                bg={"#cc6237"}
+                colorText={"#ffff"}
+              >
+                <SvgImageComponents
+                  svg={More}
+                  width={16}
+                  height={16}
+                  fill="#ffff"
+                  paddingRight="5px"
+                />
+                Inserir novo
+              </Button>
             </HeaderContent>
           </Header>
 

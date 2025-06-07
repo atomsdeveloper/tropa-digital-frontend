@@ -6,6 +6,7 @@ import "./styles/globals.css";
 
 // Context
 import { UserProvider } from "./contexts/UserContext";
+
 export function App() {
   return (
     <UserProvider>

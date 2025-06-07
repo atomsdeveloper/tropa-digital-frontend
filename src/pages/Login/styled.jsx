@@ -23,6 +23,10 @@ export const BoxLogin = styled.div`
 
   background-color: white;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: 760px) {
+    height: 420px;
+  }
 `;
 
 export const BoxForm = styled.div`
@@ -33,6 +37,11 @@ export const BoxForm = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 760px) {
+    padding: 5px 20px 20px 20px;
+    justify-content: flex-end;
+  }
 `;
 
 export const BoxFormContent = styled.div`
@@ -42,6 +51,10 @@ export const BoxFormContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 45px;
+
+  @media only screen and (max-width: 760px) {
+    padding-bottom: 0px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -75,6 +88,10 @@ export const Text = styled.p`
 export const BoxImage = styled.div`
   width: 397.5px;
   height: 478px;
+
+  @media only screen and (max-width: 760px) {
+    display: none;
+  }
 `;
 
 export const BoxBgImage = styled.div`

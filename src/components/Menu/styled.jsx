@@ -13,6 +13,14 @@ export const Container = styled.main`
 export const Nav = styled.nav`
   width: 100%;
   height: 425px;
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const BoxTitle = styled.section`
@@ -20,6 +28,14 @@ export const BoxTitle = styled.section`
   height: 15px;
 
   padding: 0px 25px;
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.h2`
@@ -41,6 +57,13 @@ export const List = styled.ul`
   list-style: none;
 
   padding: 0px 15px;
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -72,6 +95,14 @@ export const ListItem = styled.li`
     background-color: ${({ $active }) =>
       $active ? "#cc6237" : "rgba(0, 0, 0, 0.05);"};
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 

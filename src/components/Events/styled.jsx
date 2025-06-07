@@ -41,7 +41,7 @@ export const Header = styled.header`
 `;
 
 export const HeaderContent = styled.div`
-  width: 337px;
+  width: 360px;
   height: 36px;
 
   padding: 10px;
@@ -62,7 +62,7 @@ export const BoxInput = styled.div`
 
   border-radius: 33px;
 
-  padding: 10px 15px 10px 15px;
+  padding: 5px 15px 5px 15px;
 
   gap: 10px;
 
@@ -75,34 +75,5 @@ export const BoxInput = styled.div`
     position: relative;
     top: 2.25px;
     left: 2.25px;
-  }
-`;
-
-export const BoxButton = styled.div`
-  width: 124px;
-  height: 36px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-
-  border-radius: 33px;
-
-  padding: 10px;
-
-  &:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  svg {
-    width: 12px;
-    height: 12px;
-
-    position: relative;
-    top: 1px;
-    left: 2px;
   }
 `;

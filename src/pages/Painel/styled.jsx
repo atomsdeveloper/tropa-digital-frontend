@@ -24,6 +24,10 @@ export const Menu = styled.aside`
   padding-top: 20px;
 
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+  }
 `;
 
 export const BoxImage = styled.div`
@@ -34,6 +38,14 @@ export const BoxImage = styled.div`
   padding-right: 25px;
 
   gap: 10px;
+
+  @media only screen and (max-width: 700px) {
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Container = styled.main`

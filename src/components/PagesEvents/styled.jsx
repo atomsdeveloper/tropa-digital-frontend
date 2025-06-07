@@ -35,18 +35,12 @@ export const BoxButtonPages = styled.div`
 
   padding: 10px;
 
-  background-color: ${({ $bg }) =>
-    !$bg ? "rgba(245, 245, 245, 1)" : "rgba(204, 98, 55, 1)"};
-
   button {
     font-family: Roboto;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0%;
-
-    color: ${({ $bg }) =>
-      $bg ? "rgba(245, 245, 245, 1)" : "rgba(0, 0, 0, 1)"};
   }
 
   &:hover {
@@ -68,9 +62,6 @@ export const BoxPageValue = styled.div`
 
   border-radius: 200px;
 
-  background-color: ${({ $bg }) =>
-    !$bg ? "rgba(245, 245, 245, 1)" : " rgba(204, 98, 55, 1)"};
-
   span {
     font-family: Roboto;
     font-weight: 400;
@@ -79,8 +70,5 @@ export const BoxPageValue = styled.div`
     letter-spacing: 0%;
 
     text-align: center;
-
-    color: ${({ $bg }) =>
-      $bg ? "rgba(245, 245, 245, 1)" : "rgba(0, 0, 0, 1)"};
   }
 `;

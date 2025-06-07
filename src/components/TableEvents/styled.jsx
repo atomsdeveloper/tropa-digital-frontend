@@ -59,3 +59,8 @@ export const Td = styled.td`
     background-color: rgba(77, 239, 0, 1);
   }
 `;
+
+export const TableWrapper = styled.div`
+  width: 100%;
+  overflow-y: auto;
+`;
